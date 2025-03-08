@@ -36,11 +36,11 @@ InshaAllah, By his marcy I will Gain Success
     }
     #hm_about_us_article > div:nth-child(2){
         width: 440px;
-        height: 30em;
-        background: url('/img/about_us_article_image.jpg');
-        background-position:top center ;
+        height: 26em;
+        background: url('/img/home-about-us.l.jpg');
+        /* background-position:top center ; */
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;

@@ -35,7 +35,7 @@
   "main": "index.js",
   "scripts": {
     "test": "nodemon test.js",
-    "dev": "nodemon index.js --ignore public/ --ignore _lib/ --ignore test.js",
+    "start": "nodemon index.js --ignore public/ --ignore _lib/ --ignore test.js",
     "nv": "nodemon s.js --ignore public/ --ignore _lib/"
   },
   "keywords": [],
