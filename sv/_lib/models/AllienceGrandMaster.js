@@ -37,6 +37,10 @@ let allienceSchema = new Schema({
     createdAt :{
         type: Number,
         default: Date.now 
+    },
+    country : {
+        type: String,
+        trim: true,
     }
 })
 

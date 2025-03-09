@@ -165,11 +165,12 @@ Insha Allah,  By the marcy of Allah,  I will gain success
             let organizationLogo = form.querySelector('#orgLogoUrl').value;
             let OrganizationLink = form.querySelector('#orgLink').value;
             let info = form.querySelector('textarea').value;
+            let country = form.querySelector('#allient-grand-master-country').value;
 
             let response = await fetch('/api/api_s/allience-grand-master/', {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
-                body: JSON.stringify({ name, title, image, organizationLogo, OrganizationLink, info })
+                body: JSON.stringify({ name, title, image, organizationLogo, OrganizationLink, info,country })
             });
             if (response.status === 201) {
                 alert('Grand Master Added To Allience Page SuccessFully');
@@ -294,11 +295,12 @@ Insha Allah,  By the marcy of Allah,  I will gain success
                 let organizationLogo = form.querySelector('#orgLogoUrl').value;
                 let OrganizationLink = form.querySelector('#orgLink').value;
                 let info = form.querySelector('textarea').value;
+                let country = form.querySelector('#allient-grand-master-country').value;
                 let gmid= modal.getAttribute('gmid');
                 let response = await fetch('/api/api_s/allience-grand-master/' + gmid, {
                     method: 'put',
                     headers: { 'content-type': 'application/json' },
-                    body: JSON.stringify({ name, title, image, organizationLogo, OrganizationLink, info })
+                    body: JSON.stringify({ name, title, image, organizationLogo, OrganizationLink, info , country })
                 });
                 if (response.status === 201) {
                     alert('Grand Master Updated To Allience Page SuccessFully');

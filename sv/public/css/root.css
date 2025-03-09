@@ -16,7 +16,7 @@ html{
 body{
     overflow-x: hidden;
 }
-
+ 
 :root {
     --main-cl :#ffaa1c; /* my- #ca8401 */ /*client #ffaa1c*/
     --ft-main-cl :rgb(197, 150, 30); /*prev --#915e00*/

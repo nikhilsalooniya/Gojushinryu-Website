@@ -39,10 +39,10 @@ async function deleteGrandMaster(req = request, res = response) {
 
 async function postGrandMaster(req = request, res = response) {
     try {
-        let { name, image , organizationLogo , OrganizationLink , title , info } = req.body;
-        for (let i = 0; i < 6; i++) {
-            const element = [name, image, organizationLogo, OrganizationLink, title, info][i];
-            const elementNames = ["name", "image", "organizationLogo","OrganizationLink", "title", "info"];
+        let { name, image , organizationLogo , OrganizationLink , title , info,country } = req.body;
+        for (let i = 0; i < 7; i++) {
+            const element = [name, image, organizationLogo, OrganizationLink, title, info,country][i];
+            const elementNames = ["name", "image", "organizationLogo","OrganizationLink", "title", "info",'country'];
             if (!element?.trim()) {
                 return res.status(400).json({ message: elementNames[i] + ' is emty' });
             }
@@ -60,7 +60,8 @@ async function postGrandMaster(req = request, res = response) {
             OrganizationLink: OrganizationLink,
             title: title,
             info: info,
-            infoHtml: info.replaceAll('\n', '<br>')
+            infoHtml: info.replaceAll('\n', '<br>'),
+            country: country
         }))._id;
         return res.status(201).send(_id)
     } catch (error) {
@@ -71,10 +72,10 @@ async function postGrandMaster(req = request, res = response) {
 
 async function putGrandMaster(req = request, res = response) {
     try {
-        let { name, image , organizationLogo , OrganizationLink , title , info } = req.body;
+        let { name, image , organizationLogo , OrganizationLink , title , info ,country } = req.body;
         for (let i = 0; i < 6; i++) {
-            const element = [name, image, organizationLogo, OrganizationLink, title, info][i];
-            const elementNames = ["name", "image", "organizationLogo","OrganizationLink", "title", "info"];
+            const element = [name, image, organizationLogo, OrganizationLink, title, info, country][i];
+            const elementNames = ["name", "image", "organizationLogo","OrganizationLink", "title", "info",'country'];
             if (!element?.trim()) {
                 return res.status(400).json({ message: elementNames[i] + ' is emty' });
             }
@@ -92,7 +93,8 @@ async function putGrandMaster(req = request, res = response) {
             OrganizationLink: OrganizationLink,
             title: title,
             info: info,
-            infoHtml: info.replaceAll('\n', '<br>')
+            infoHtml: info.replaceAll('\n', '<br>'),
+            country: country
         });
         return res.sendStatus(201)
     } catch (error) {
