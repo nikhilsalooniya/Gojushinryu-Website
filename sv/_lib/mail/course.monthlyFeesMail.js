@@ -20,11 +20,11 @@ async function notifyAdminOfStudentPayment({ student_name, course_name, course_f
               <div style="text-align: center; margin-bottom: 20px;">
                 <img src="${BASE_URL + '/img/i1.png'}" alt="${ORGANIZATION_NAME} Icon" style="max-width: 100px;" />
               </div>
-              <h2 style="color: #ffaa1c; text-align: center;">Student Payment Received</h2>
+              <h2 style="color: #ffcf0b; text-align: center;">Student Payment Received</h2>
               <p>Dear Admin,</p>
               <p>A student has successfully paid their monthly course fees. Below are the details:</p>
  
-              <h3 style="color: #ffaa1c;">Payment Details:</h3>
+              <h3 style="color: #ffcf0b;">Payment Details:</h3>
               <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
                 <tr>
                   <td style="border: 1px solid #ddd; padding: 10px;"><strong>Student Name:</strong></td>
@@ -54,10 +54,10 @@ async function notifyAdminOfStudentPayment({ student_name, course_name, course_f
  
               <p>This payment has been successfully processed.</p>
  
-              <h3 style="color: #ffaa1c;">Need Help?</h3>
+              <h3 style="color: #ffcf0b;">Need Help?</h3>
               <p>If you have any questions, feel free to reach out to us:</p>
               <ul style="list-style: none; padding: 0;">
-                <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffaa1c;">${ADMIN_EMAIL}</a></li>
+                <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffcf0b;">${ADMIN_EMAIL}</a></li>
                 <li>Phone: ${ADMIN_PHONE}</li>
               </ul>
  
@@ -86,11 +86,11 @@ async function sendStudentFeeConfirmation({ email, student_name, course_name, co
               <div style="text-align: center; margin-bottom: 20px;">
                 <img src="${BASE_URL + '/img/i1.png'}" alt="${ORGANIZATION_NAME} Icon" style="max-width: 100px;" />
               </div>
-              <h2 style="color: #ffaa1c; text-align: center;">Payment Confirmation</h2>
+              <h2 style="color: #ffcf0b; text-align: center;">Payment Confirmation</h2>
               <p>Dear <strong>${student_name}</strong>,</p>
               <p>We have successfully received your monthly course fee payment for <strong>${course_name}</strong>.</p>
  
-              <h3 style="color: #ffaa1c;">Payment Details:</h3>
+              <h3 style="color: #ffcf0b;">Payment Details:</h3>
               <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
                 <tr>
                   <td style="border: 1px solid #ddd; padding: 10px;"><strong>Course Name:</strong></td>
@@ -116,10 +116,10 @@ async function sendStudentFeeConfirmation({ email, student_name, course_name, co
  
               <p>Your payment has been successfully processed. If you have any questions or concerns, please contact us.</p>
  
-              <h3 style="color: #ffaa1c;">Need Help?</h3>
+              <h3 style="color: #ffcf0b;">Need Help?</h3>
               <p>If you need assistance, feel free to reach out to us:</p>
               <ul style="list-style: none; padding: 0;">
-                <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffaa1c;">${ADMIN_EMAIL}</a></li>
+                <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffcf0b;">${ADMIN_EMAIL}</a></li>
                 <li>Phone: ${ADMIN_PHONE}</li>
               </ul>
  

@@ -44,7 +44,7 @@ Insha Allah,  BY Allahs Marcy,  I will Gain success
    }
    @media screen and (max-width: 510px) {
      #banner p {
-       width: 400px;
+       width: 320px;
      }
    }
    #banner button {
@@ -83,7 +83,8 @@ Insha Allah,  BY Allahs Marcy,  I will Gain success
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    height: 470px;
+    /*height: 470px;*/
+    height: 520px;
     box-sizing: border-box;
     text-decoration: none;
     color: black;
@@ -105,7 +106,7 @@ Insha Allah,  BY Allahs Marcy,  I will Gain success
   }
   .post span{
     font-weight: 500; 
-    color: darkorange;
+    color: #ffcf0b;
     font-size: 13.5px;
     line-height: 1.135em;
     padding-top: 7px;

@@ -44,7 +44,7 @@
 }
 @media screen and (max-width: 510px) {
     #banner p {
-       width: 400px;
+       width: 320px;
     }
 }
 #banner button {

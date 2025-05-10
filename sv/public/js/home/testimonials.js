@@ -21,8 +21,8 @@ Insha Allah,  By the marcy of Allah,  I will gain success
                             testimonials[i].querySelector('img').className = '';
                             testimonials[i].querySelector('hr').className = '';
                             testimonials[i].querySelector('span').className = '';
-                            testimonials[i].querySelector('span').style.color = '#FF6F3C';
-                            testimonials[i].querySelector('hr').style.background = '#FF6F3C'
+                            testimonials[i].querySelector('span').style.color = '';
+                            testimonials[i].querySelector('hr').style.background = '#ffcf0b'
                         }
 
                     }

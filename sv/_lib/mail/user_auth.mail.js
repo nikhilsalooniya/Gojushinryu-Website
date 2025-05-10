@@ -15,11 +15,11 @@ export const user_varification_user_mail = async ({ to, otp, user }) => {
       html: `
                   <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
                       <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1);">
-                          <h2 style="color: #ffaa1c; text-align: center;">Email Verification</h2>
+                          <h2 style="color: #ffcf0b; text-align: center;">Email Verification</h2>
                           <p>Dear ${user},</p>
                           <p>Thank you for registering with <strong>${ORGANIZATION_NAME}</strong>. To complete your registration, please verify your email by entering the following OTP (One-Time Password):</p>
                           
-                          <div style="text-align: center; font-size: 24px; font-weight: bold; color: #ffaa1c; margin: 20px 0;">
+                          <div style="text-align: center; font-size: 24px; font-weight: bold; color: #ffcf0b; margin: 20px 0;">
                               ${otp}
                           </div>
   
@@ -28,7 +28,7 @@ export const user_varification_user_mail = async ({ to, otp, user }) => {
                           <p>Need help? Contact our support team:</p>
                           <ul style="list-style: none; padding: 0;">
                         
-                          <li>📧 Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffaa1c;">${ADMIN_EMAIL}</a></li>
+                          <li>📧 Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffcf0b;">${ADMIN_EMAIL}</a></li>
                               <li>📞 Phone: ${ADMIN_PHONE}</li>
                           </ul>
   
@@ -63,14 +63,14 @@ export const user_sign_up_success_user_mail = async ({studentEmail, studentName}
             <div style="text-align: center; margin-bottom: 20px;">
               <img src="${BASE_URL + '/img/i1.png'}" alt="${ORGANIZATION_NAME} Icon" style="max-width: 100px;" />
             </div>
-            <h2 style="color: #ffaa1c; text-align: center;">Account Request Received</h2>
+            <h2 style="color: #ffcf0b; text-align: center;">Account Request Received</h2>
             <p>Dear ${studentName},</p>
             <p>Thank you for creating an account at <strong>${ORGANIZATION_NAME}</strong> on <strong>${formattedDate}</strong>.</p>
             <p>Your account request is currently under review by our admin team. Until your account is approved, you will not have access to student features (such as the syllabus and student corner).</p>
             <p>Please be patient, and we will notify you via email once your account is approved.</p>
             <p>If you have any questions, feel free to contact us:</p>
             <ul style="list-style: none; padding: 0;">
-              <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffaa1c;">${ADMIN_EMAIL}</a></li>
+              <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffcf0b;">${ADMIN_EMAIL}</a></li>
               <li>Phone: ${ADMIN_PHONE}</li>
             </ul>
             <p>Thank you for your interest in <strong>${ORGANIZATION_NAME}</strong>.</p>
@@ -103,7 +103,7 @@ export const user_sign_up_success_admin_mail = async ( {studentName, studentEmai
             <div style="text-align: center; margin-bottom: 20px;">
               <img src="${BASE_URL + '/img/i1.png'}" alt="${ORGANIZATION_NAME} Icon" style="max-width: 100px;" />
             </div>
-            <h2 style="color: #ffaa1c; text-align: center;">New Student Account Request</h2>
+            <h2 style="color: #ffcf0b; text-align: center;">New Student Account Request</h2>
             <p>Dear Admin,</p>
             <p>A new student account request has been submitted at <strong>${ORGANIZATION_NAME}</strong> on <strong>${formattedDate}</strong>.</p>
             <p><strong>Student Details:</strong></p>
@@ -135,16 +135,16 @@ export const studentAccountApprovalEmail = async ({studentEmail, studentName}) =
             <div style="text-align: center; margin-bottom: 20px;">
               <img src="${BASE_URL + '/img/i2.png'}" alt="${ORGANIZATION_NAME} Icon" style="max-width: 100px;" />
             </div>
-            <h2 style="color: #ffaa1c; text-align: center;">Account Approved</h2>
+            <h2 style="color: #ffcf0b; text-align: center;">Account Approved</h2>
             <p>Dear ${studentName},</p>
             <p>We are pleased to inform you that your student account at <strong>${ORGANIZATION_NAME}</strong> has been approved.</p>
             <p>You now have full access to the student features, including the student corner and syllabus. Please visit your dashboard by clicking the link below:</p>
             <p style="text-align: center;">
-              <a href="${BASE_URL + '/student-corner'}" style="color: #ffaa1c; text-decoration: none; font-weight: bold;">Visit Student Corner</a>
+              <a href="${BASE_URL + '/student-corner'}" style="color: #ffcf0b; text-decoration: none; font-weight: bold;">Visit Student Corner</a>
             </p>
             <p>If you have any questions, please feel free to contact us:</p>
             <ul style="list-style: none; padding: 0;">
-              <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffaa1c;">${ADMIN_EMAIL}</a></li>
+              <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffcf0b;">${ADMIN_EMAIL}</a></li>
               <li>Phone: ${ADMIN_PHONE}</li>
             </ul>
             <p>Thank you for choosing <strong>${ORGANIZATION_NAME}</strong>. We wish you every success in your studies!</p>

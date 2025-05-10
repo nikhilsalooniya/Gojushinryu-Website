@@ -97,7 +97,7 @@ InshaAllah, By his marcy I will Gain Success
     line-height: 1.6;
 }
 .testimonials > .testimonial > .div2>i{
-    color: #FF6F3C;
+    color: var(--orange-new);
     box-sizing: border-box;
     font-size: 27px;
 }

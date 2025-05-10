@@ -100,8 +100,12 @@ body{
   }
   @media screen and (max-width :600px) {
     #banner >div > p {
-      width: 450px;
+      width: 320px;
       font-size: .95em;
+    }
+
+    #heading_section > div {
+      width: 80%;
     }
   }
   /* ------------- heading section ----------- */
@@ -147,6 +151,15 @@ body{
     height: 4px;
     background: rgba(0, 0, 0, 0.849);
   }
+
+@media screen and (max-width :600px) {
+
+  #heading_section > div {
+    width: 80%;
+    height: auto;
+  }
+}
+
   /* ------------- form section ----------- */
   #form-section {
     display: flex;

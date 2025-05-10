@@ -18,9 +18,15 @@ body{
 }
  
 :root {
-    --main-cl :#ffaa1c; /* my- #ca8401 */ /*client #ffaa1c*/
+    /*--main-cl :#ffcf0b; !* my- #ca8401 *! !*client #ffcf0b*!*/
+    --main-cl : #f6bd0e; /* my- #ca8401 */ /*client #ffcf0b*/
     --ft-main-cl :rgb(197, 150, 30); /*prev --#915e00*/
     --sc-cl : #4a401d;
+    --orange-old: #FF6F3C;
+    --orange-new: #ffcf0b;
+
+    --orange-old-2: darkorange;
+    --orange-new-2: #ffcf0b;
     /* color */
     --main-bg :#000000;
     --s-bg-color :#370617;

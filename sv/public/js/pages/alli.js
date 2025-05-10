@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', async function () {
         if (response.status===200) {
             let Masters =await response.json();
             console.log(Masters);
+            Masters = Masters.sort(function (a, b) { return a.order - b.order});
             this.document.querySelector('#mastersGrid').innerHTML='';
             
             for (let i = 0; i < Masters.length; i++) {
@@ -25,8 +26,8 @@ window.addEventListener('DOMContentLoaded', async function () {
                 </div>
                 <div class="card-body">
             
-                    <h2 class="master-name"><a href="${'/grand-master-info/'+master.createdAt}">${master.name} </a></h2>
-                    <p class="organization"><a href="${master.OrganizationLink}">${master.title}</a></p>
+                    <h2 class="master-name"><a href="${master.goto ? master.OrganizationLink : ('/grand-master-info/'+master.createdAt)}">${master.name} </a></h2>
+                    <p class="organization"><a href="${master.OrganizationLink}">${master.title.toUpperCase()}</a></p>
                     <div class="country">
                         <span>${master.country}</span>
                     </div>

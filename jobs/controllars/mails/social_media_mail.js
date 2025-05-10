@@ -20,11 +20,11 @@ async function notifyFacebookNotConnected() {
         html: `
             <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
               <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-                <h2 style="color: #ffaa1c; text-align: center;">Facebook Connection Required</h2>
+                <h2 style="color: #ffcf0b; text-align: center;">Facebook Connection Required</h2>
                 <p>Dear Admin,</p>
                 <p>You attempted to access a feature that requires a connected <strong>Facebook</strong> account.</p>
                 <p>To use this feature, please connect your Facebook account in the <strong>Control Panel</strong>.</p>
-                <p><a href="${BASE_URL}/control-panal" style="color: #ffaa1c;">Click here to connect your Facebook account</a></p>
+                <p><a href="${BASE_URL}/control-panal" style="color: #ffcf0b;">Click here to connect your Facebook account</a></p>
                 <p>Best regards,<br><strong>${ORGANIZATION_NAME} Team</strong></p>
               </div>
             </div>
@@ -82,11 +82,11 @@ async function notifyYouTubeNotConnected() {
         html: `
         <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
           <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-            <h2 style="color: #ffaa1c; text-align: center;">YouTube Connection Required</h2>
+            <h2 style="color: #ffcf0b; text-align: center;">YouTube Connection Required</h2>
             <p>Dear Admin,</p>
             <p>You attempted to access a feature that requires a connected <strong>YouTube</strong> account.</p>
             <p>To use this feature, please connect your YouTube account in the <strong>Control Panel</strong>.</p>
-            <p><a href="${BASE_URL}/control-panal" style="color: #ffaa1c;">Click here to connect your YouTube account</a></p>
+            <p><a href="${BASE_URL}/control-panal" style="color: #ffcf0b;">Click here to connect your YouTube account</a></p>
             <p>Best regards,<br><strong>${ORGANIZATION_NAME} Team</strong></p>
           </div>
         </div>
@@ -144,11 +144,11 @@ async function notifyInstagramNotConnected() {
         html: `
             <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
               <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-                <h2 style="color: #ffaa1c; text-align: center;">Instagram Connection Required</h2>
+                <h2 style="color: #ffcf0b; text-align: center;">Instagram Connection Required</h2>
                 <p>Dear Admin,</p>
                 <p>You attempted to access a feature that requires a connected <strong>Instagram</strong> account.</p>
                 <p>To use this feature, please connect your Instagram account in the <strong>Control Panel</strong>.</p>
-                <p><a href="${BASE_URL}/control-panal" style="color: #ffaa1c;">Click here to connect your Instagram account</a></p>
+                <p><a href="${BASE_URL}/control-panal" style="color: #ffcf0b;">Click here to connect your Instagram account</a></p>
                 <p>Best regards,<br><strong>${ORGANIZATION_NAME} Team</strong></p>
               </div>
             </div>
@@ -206,11 +206,11 @@ async function notifyXNotConnected() {
         html: `
             <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
               <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-                <h2 style="color: #ffaa1c; text-align: center;">X (Twitter) Connection Required</h2>
+                <h2 style="color: #ffcf0b; text-align: center;">X (Twitter) Connection Required</h2>
                 <p>Dear Admin,</p>
                 <p>You attempted to access a feature that requires a connected <strong>X (Twitter)</strong> account.</p>
                 <p>To use this feature, please connect your X (Twitter) account in the <strong>Control Panel</strong>.</p>
-                <p><a href="${BASE_URL}/control-panal" style="color: #ffaa1c;">Click here to connect your X (Twitter) account</a></p>
+                <p><a href="${BASE_URL}/control-panal" style="color: #ffcf0b;">Click here to connect your X (Twitter) account</a></p>
                 <p>Best regards,<br><strong>${ORGANIZATION_NAME} Team</strong></p>
               </div>
             </div>
@@ -268,11 +268,11 @@ async function notifyLinkedInNotConnected() {
         html: `
             <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
               <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-                <h2 style="color: #ffaa1c; text-align: center;">LinkedIn Connection Required</h2>
+                <h2 style="color: #ffcf0b; text-align: center;">LinkedIn Connection Required</h2>
                 <p>Dear Admin,</p>
                 <p>You attempted to access a feature that requires a connected <strong>LinkedIn</strong> account.</p>
                 <p>To use this feature, please connect your LinkedIn account in the <strong>Control Panel</strong>.</p>
-                <p><a href="${BASE_URL}/control-panal" style="color: #ffaa1c;">Click here to connect your LinkedIn account</a></p>
+                <p><a href="${BASE_URL}/control-panal" style="color: #ffcf0b;">Click here to connect your LinkedIn account</a></p>
                 <p>Best regards,<br><strong>${ORGANIZATION_NAME} Team</strong></p>
               </div>
             </div>
@@ -330,11 +330,11 @@ async function notifyTikTokNotConnected() {
         html: `
             <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
               <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-                <h2 style="color: #ffaa1c; text-align: center;">TikTok Connection Required</h2>
+                <h2 style="color: #ffcf0b; text-align: center;">TikTok Connection Required</h2>
                 <p>Dear Admin,</p>
                 <p>You attempted to access a feature that requires a connected <strong>TikTok</strong> account.</p>
                 <p>To use this feature, please connect your TikTok account in the <strong>Control Panel</strong>.</p>
-                <p><a href="${BASE_URL}/control-panal" style="color: #ffaa1c;">Click here to connect your TikTok account</a></p>
+                <p><a href="${BASE_URL}/control-panal" style="color: #ffcf0b;">Click here to connect your TikTok account</a></p>
                 <p>Best regards,<br><strong>${ORGANIZATION_NAME} Team</strong></p>
               </div>
             </div>

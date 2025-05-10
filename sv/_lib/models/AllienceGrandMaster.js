@@ -41,6 +41,9 @@ let allienceSchema = new Schema({
     country : {
         type: String,
         trim: true,
+    },
+    goto: {
+        type: Boolean
     }
 })
 

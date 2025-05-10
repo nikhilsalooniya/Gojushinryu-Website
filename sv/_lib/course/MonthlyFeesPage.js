@@ -76,7 +76,7 @@ export async function MonthlyFeesRequestPage(req=request, res=response) {
     :root {
         --main-bg: whitesmoke;
         --card-bg: white;
-        --accent-color: #ffaa1c;
+        --accent-color: #ffcf0b;
         --text-color: black;
         --border-color: #ccc;
         --font-family: 'Libre Franklin', sans-serif;
@@ -609,7 +609,7 @@ function MonthlyFeesSuccessPage({student,total, id , course }) {
                 :root {
                     --main-bg: whitesmoke;
                     --card-bg: white;
-                    --accent-color: #ffaa1c;
+                    --accent-color: #ffcf0b;
                     --text-color: black;
                     --font-family: 'Libre Franklin', sans-serif;
                 }
@@ -646,7 +646,7 @@ function MonthlyFeesSuccessPage({student,total, id , course }) {
                     font-size: 2rem;
                     font-weight: 700;
                     margin-bottom: 20px;
-                    color: #ffaa1c;
+                    color: #ffcf0b;
                 }
         
                 .success-container p {
@@ -676,7 +676,7 @@ function MonthlyFeesSuccessPage({student,total, id , course }) {
                     padding: 12px 25px;
                     font-size: 1rem;
                     color: black;
-                    background: #ffaa1c;
+                    background: #ffcf0b;
                     text-decoration: none;
                     border-radius: 5px;
                     font-weight: 600;
@@ -689,7 +689,7 @@ function MonthlyFeesSuccessPage({student,total, id , course }) {
         
                 .success-container .checkmark {
                     font-size: 4rem;
-                    color:#ffaa1c;
+                    color:#ffcf0b;
                     margin-bottom: 20px;
                 }
             </style>
@@ -767,7 +767,7 @@ function MonthlyFeesCancelPage({ student, total, id, course, payment_link }) {
         :root {
             --main-bg: whitesmoke;
             --card-bg: white;
-            --accent-color: #ffaa1c;
+            --accent-color: #ffcf0b;
             --text-color: black;
             --error-color: #ff4c4c;
             --font-family: 'Libre Franklin', sans-serif;

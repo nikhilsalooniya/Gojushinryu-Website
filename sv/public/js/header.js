@@ -23,7 +23,12 @@ headerIcon.setAttribute('src' ,'/img/header_icon1.png') ;
 
 function loadH3(params) { 
       let h3=  document.createElement('h3');
-      h3.innerHTML = '<a href="/courses" > Book Your First Class</a>&nbsp;Free / School of  Traditional Martial Arts' ;
+      h3.innerHTML = `
+        <div style="display: flex; align-items: center; justify-content: center;gap: 20px;">
+              <img src="/img/stma-logo-trans.png" class="banner-stma" style="height: 25px" alt="STMA LOGO">
+              <a href="/courses" > Book Your First Class</a>&nbsp;Free / School of  Traditional Martial Arts
+        </div>
+        `;
       topBar.appendChild(h3);
       h3.querySelector('a').style.textDecoration='underline';
       h3.style.right='-50vw';
@@ -32,8 +37,8 @@ function loadH3(params) {
         // h3.style.transition='all 21s ease';
         // h3.style.right='130vw';
       },50);
-      setTimeout(e=> h3.remove(),21000);
-      setTimeout(loadH3, 10000);
+      setTimeout(e=> h3.remove(),11000);
+      setTimeout(loadH3, 12000);
 }
 
 

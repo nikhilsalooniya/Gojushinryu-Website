@@ -128,7 +128,8 @@ InshaAllah, By his marcy I will Gain Success
     }
     @media screen and (max-width:650px) {
         #event_section >div > div{
-            width: 433px;
+            /*width: 433px;*/
+            width: 100%;
         }
     }
 

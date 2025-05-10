@@ -18,14 +18,22 @@ body{
 }
 .cart-container {
     max-width: 1200px;
+    width: 100%;
     margin: 40px auto;
     padding: 20px;
 }
+
+.table-container {
+    width: 100%;
+    overflow-x: scroll;
+}
+
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 30px;
+
   }
   
   th{
@@ -79,7 +87,7 @@ table button{
 }
 
 .checkout-btn {
-    background-color: #ffaa1c;
+    background-color: #ffcf0b;
     color: black;
     padding: 15px;
     border: none;

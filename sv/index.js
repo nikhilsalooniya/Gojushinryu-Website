@@ -116,4 +116,4 @@ app.get('*', (req, res) => res.status(404).render('404'))
 
 
 
-app.listen(4000, e => log('SubhanAllah server is working'));
+app.listen(3000, e => log('SubhanAllah server is working'));

@@ -46,7 +46,7 @@ i{
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap;
     row-gap: 40px;
     padding:3em;
@@ -64,7 +64,7 @@ i{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.167);
    z-index: 100; 
    filter: none;
-height: 465px;
+/*height: 465px;*/
 }
 .event > img {
     width: 100%;

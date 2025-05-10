@@ -129,12 +129,12 @@ router.post('/apply', async function applyForSeminar(req = request, res) {
         subject: `New Seminar Application: ${formData.fullName} - ${formData.seminar}`,
         html: `
           <div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; color: #333;">
-              <header style="background-color: #ffffff; padding: 20px; border-bottom: 3px solid #ffaa1c;">
+              <header style="background-color: #ffffff; padding: 20px; border-bottom: 3px solid #ffcf0b;">
                   <img src="https://gojushinryu.com/img/i2.png" alt="School Logo" style="max-width: 150px;">
               </header>
   
               <main style="padding: 30px 20px;">
-                  <h2 style="color: #ffaa1c; margin-bottom: 25px;">New Seminar Application Received</h2>
+                  <h2 style="color: #ffcf0b; margin-bottom: 25px;">New Seminar Application Received</h2>
                   
                   <div style="margin-bottom: 30px;">
                       <h3 style="color: #444; margin-bottom: 15px;">Applicant Information</h3>
@@ -194,7 +194,7 @@ router.post('/apply', async function applyForSeminar(req = request, res) {
   
               <footer style="background-color: #f4f4f4; padding: 20px; text-align: center; font-size: 0.9em; color: #666;">
                   <p>This application was submitted through the School of Traditional Martial Arts website<br>
-                  <span style="color: #ffaa1c;">${new Date().toLocaleDateString()}</span></p>
+                  <span style="color: #ffcf0b;">${new Date().toLocaleDateString()}</span></p>
               </footer>
           </div>
           `
@@ -210,17 +210,17 @@ router.post('/apply', async function applyForSeminar(req = request, res) {
         subject: `Application Received: ${formData.seminar}`,
         html: `
           <div style="max-width: 800px; margin: 0 auto; font-family: Arial, sans-serif; color: #333;">
-              <header style="background-color: #ffffff; padding: 20px; border-bottom: 3px solid #ffaa1c;">
+              <header style="background-color: #ffffff; padding: 20px; border-bottom: 3px solid #ffcf0b;">
                   <img src="https://gojushinryu.com/img/6060.png" alt="School Logo" style="max-width: 150px;">
               </header>
   
               <main style="padding: 30px 20px;">
-                  <h2 style="color: #ffaa1c; margin-bottom: 25px;">Thank You for Your Application!</h2>
+                  <h2 style="color: #ffcf0b; margin-bottom: 25px;">Thank You for Your Application!</h2>
                   
                   <div style="margin-bottom: 25px;">
                       <p>Dear ${formData.fullName},</p>
                       <p>We have successfully received your application for:</p>
-                      <div style="background-color: #f9f9f9; padding: 15px; margin: 15px 0; border-left: 4px solid #ffaa1c;">
+                      <div style="background-color: #f9f9f9; padding: 15px; margin: 15px 0; border-left: 4px solid #ffcf0b;">
                           <h3 style="margin: 0; color: #444;">${formData.seminar}</h3>
                       </div>
                   </div>
@@ -242,7 +242,7 @@ router.post('/apply', async function applyForSeminar(req = request, res) {
                   </div>
   
                   <p style="margin-top: 25px;">For questions, contact our admissions office:<br>
-                  <strong style="color: #ffaa1c;">admissions@martialartsschool.com</strong></p>
+                  <strong style="color: #ffcf0b;">admissions@martialartsschool.com</strong></p>
               </main>
   
               <footer style="background-color: #f4f4f4; padding: 20px; text-align: center; font-size: 0.9em; color: #666;">
@@ -250,9 +250,9 @@ router.post('/apply', async function applyForSeminar(req = request, res) {
                   123 Discipline Way, Master's City, MC 12345<br>
                   Tel: (555) 123-4567 | Email: info@martialartsschool.com</p>
                   <div style="margin-top: 10px;">
-                      <a href="#" style="color: #ffaa1c; text-decoration: none; margin: 0 10px;">Website</a>
-                      <a href="#" style="color: #ffaa1c; text-decoration: none; margin: 0 10px;">Facebook</a>
-                      <a href="#" style="color: #ffaa1c; text-decoration: none; margin: 0 10px;">Instagram</a>
+                      <a href="#" style="color: #ffcf0b; text-decoration: none; margin: 0 10px;">Website</a>
+                      <a href="#" style="color: #ffcf0b; text-decoration: none; margin: 0 10px;">Facebook</a>
+                      <a href="#" style="color: #ffcf0b; text-decoration: none; margin: 0 10px;">Instagram</a>
                   </div>
               </footer>
           </div>
@@ -310,7 +310,7 @@ router.get('/application/recieved', function (req, res) {
         }
 
         .success-container h1 {
-            color: #ffaa1c;
+            color: #ffcf0b;
             font-size: 2.5em;
             margin-bottom: 20px;
         }
@@ -355,14 +355,14 @@ router.get('/application/recieved', function (req, res) {
         }
 
         .success-container .cta-buttons .btn-primary {
-            background-color: #ffaa1c;
+            background-color: #ffcf0b;
             color: white;
         }
 
         .success-container .cta-buttons .btn-secondary {
             background-color: transparent;
-            border: 2px solid #ffaa1c;
-            color: #ffaa1c;
+            border: 2px solid #ffcf0b;
+            color: #ffcf0b;
         }
 
         .success-container .cta-buttons a:hover {
@@ -374,7 +374,7 @@ router.get('/application/recieved', function (req, res) {
         }
 
         .success-container .cta-buttons .btn-secondary:hover {
-            background-color: #ffaa1c;
+            background-color: #ffcf0b;
             color: white;
         }
 
@@ -386,7 +386,7 @@ router.get('/application/recieved', function (req, res) {
         }
 
         .footer a {
-            color: #ffaa1c;
+            color: #ffcf0b;
             text-decoration: none;
         }
 

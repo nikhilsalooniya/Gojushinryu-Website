@@ -34,9 +34,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon --watch ../sv index.js -e hbs,css,html,js,mjs,cjs,json",
     "test": "nodemon test.js",
-    "start": "nodemon index.js --ignore public/ --ignore _lib/ --ignore test.js",
-    "nv": "nodemon s.js --ignore public/ --ignore _lib/"
+    "start:dev": "nodemon index.js --ignore public/ --ignore _lib/ --ignore test.js",
+    "nv": "nodemon s.js --ignore public/ --ignore _lib/",
+    "start:prod": "node index.js"
   },
   "keywords": [],
   "author": "",

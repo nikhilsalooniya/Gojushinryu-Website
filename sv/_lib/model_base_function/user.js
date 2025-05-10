@@ -51,7 +51,7 @@ export async function StudentCornerPageRoute(req = request, res = response) {
     :root {
       --bg-color: whitesmoke;
       --card-bg: #ffffff;
-      --accent-color: #ffaa1c;
+      --accent-color: #ffcf0b;
       --error-color: #d9534f;
       --text-color: #333;
       --font-family: 'Libre Franklin', sans-serif;
@@ -283,7 +283,7 @@ export async function AdminApproveUserAfterRegistration(req = request, res = res
     :root {
       --bg-color: whitesmoke;
       --card-bg: #ffffff;
-      --accent-color: #ffaa1c;
+      --accent-color: #ffcf0b;
       --text-color: #333;
       --font-family: 'Libre Franklin', sans-serif;
     }

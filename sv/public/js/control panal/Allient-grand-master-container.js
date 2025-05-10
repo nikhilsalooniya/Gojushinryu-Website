@@ -56,6 +56,7 @@ Insha Allah,  By the marcy of Allah,  I will gain success
                     modal.querySelector(`#orgLogoUrl`).value=master.organizationLogo;
                     modal.querySelector(`#orgLink`).value= master.OrganizationLink;
                     modal.querySelector(`#grandMasterInfo`).value= master.info;
+                    modal.querySelector(`#allient-grand-master-country`).value=master.country;
                     modal.setAttribute('gmid', event.target.getAttribute('gmid'));
                     modal.style.display='flex';
             

@@ -79,22 +79,22 @@ export const membershipCongratulationsEmail = async (userEmail, userName,org, me
           html: `
               <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
                   <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 2px 2px 10px rgba(0,0,0,0.1); text-align: center;">
-                      <h2 style="color: #ffaa1c;">🎉 Congratulations, ${userName}! 🎉</h2>
+                      <h2 style="color: #ffcf0b;">🎉 Congratulations, ${userName}! 🎉</h2>
                       <p>We are thrilled to welcome you as an official ${membership_type} member of <strong>${org}</strong></p>
 
                       <p>This marks the beginning of an incredible journey where you will learn, grow, and become a part of a respected martial arts legacy. Your dedication and passion for martial arts have earned you a place in our global community.</p>
 
-                      <h3 style="color: #ffaa1c;">What's Next?</h3>
+                      <h3 style="color: #ffcf0b;">What's Next?</h3>
                       <p>✅ Access to exclusive training resources</p>
                       <p>✅ Learn from experienced masters</p>
                       <p>✅ Join seminars, tournaments, and special events</p>
 
                       <p>We encourage you to visit our website and explore opportunities for growth:</p>
-                      <p><a href="${BASE_URL}/about-us/members" style="color: #ffaa1c; font-weight: bold;">Visit Our Website</a></p>
+                      <p><a href="${BASE_URL}/about-us/members" style="color: #ffcf0b; font-weight: bold;">Visit Our Website</a></p>
 
                       <p>If you have any questions or need assistance, feel free to contact us:</p>
                       <ul style="list-style: none; padding: 0;">
-                          <li>📧 Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffaa1c;">${ADMIN_EMAIL}</a></li>
+                          <li>📧 Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffcf0b;">${ADMIN_EMAIL}</a></li>
                           <li>📞 Phone:${ADMIN_PHONE}</li>
                       </ul>
 
@@ -149,7 +149,7 @@ export async function gmembershipFeeRequestMail({studentEmail, studentName, memb
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
           <div style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-            <h2 style="color: #ffaa1c; text-align: center;">Membership Fee Payment Request</h2>
+            <h2 style="color: #ffcf0b; text-align: center;">Membership Fee Payment Request</h2>
             <p>Dear ${studentName},</p>
             <p>Thank you for choosing to be a part of <strong>${ORGANIZATION_NAME}</strong>. We are excited to have you as a member!</p>
             <p>Your membership fee for the <strong>${membershipType}</strong> is <strong>$${membershipFee.toFixed(2)}</strong> and is due on <strong>${dueDate}</strong>.</p>
@@ -164,13 +164,13 @@ export async function gmembershipFeeRequestMail({studentEmail, studentName, memb
             </div>
             <p>If you have any questions, please feel free to contact us:</p>
             <ul style="list-style: none; padding: 0;">
-              <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffaa1c;">${ADMIN_EMAIL}</a></li>
+              <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffcf0b;">${ADMIN_EMAIL}</a></li>
               <li>Phone: ${ADMIN_PHONE}</li>
             </ul>
             <p>Thank you for your prompt attention to this matter. We look forward to a successful journey together.</p>
             <p>Best regards,<br>The ${ORGANIZATION_NAME} Team</p>
             <p style="text-align: center;">
-              <a href="${BASE_URL}" style="color: #ffaa1c; text-decoration: none;">Visit our website</a>
+              <a href="${BASE_URL}" style="color: #ffcf0b; text-decoration: none;">Visit our website</a>
             </p>
             <hr style="margin: 20px 0; border: none; border-top: 1px solid #ddd;" />
             <p style="text-align: center;">Follow us on social media:</p>
@@ -212,17 +212,17 @@ export const membershipPaymentConfirmationToStudent = async ({studentEmail,stude
             <div style="text-align: center; margin-bottom: 20px;">
               <img src="${BASE_URL + '/img/i2.png'}" alt="${ORGANIZATION_NAME} Icon" style="max-width: 100px;" />
             </div>
-            <h2 style="color: #ffaa1c; text-align: center;">Payment Confirmation</h2>
+            <h2 style="color: #ffcf0b; text-align: center;">Payment Confirmation</h2>
             <p>Dear ${studentName},</p>
             <p>Thank you for your payment of <strong>$${membershipFee.toFixed(2)}</strong> for the <strong>${membershipType}</strong> membership at <strong>${ORGANIZATION_NAME}</strong>.</p>
             <p>Your payment was successfully received on <strong>${formattedPaymentDate}</strong>, and your membership is now active.</p>
             <p>If you have any questions, please feel free to contact us:</p>
             <ul style="list-style: none; padding: 0;">
-              <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffaa1c;">${ADMIN_EMAIL}</a></li>
+              <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffcf0b;">${ADMIN_EMAIL}</a></li>
               <li>Phone: ${ADMIN_PHONE}</li>
             </ul>
             <p style="text-align: center;">
-              <a href="${BASE_URL}" style="color: #ffaa1c; text-decoration: none;">Visit our website</a>
+              <a href="${BASE_URL}" style="color: #ffcf0b; text-decoration: none;">Visit our website</a>
             </p>
             <p>Thank you for being a valued member of <strong>${ORGANIZATION_NAME}</strong>.</p>
             <p>Best regards,<br>The ${ORGANIZATION_NAME} Team</p>
@@ -257,7 +257,7 @@ export const membershipPaymentNotificationToAdmin = async ({ studentName, member
             <div style="text-align: center; margin-bottom: 20px;">
               <img src="${BASE_URL + '/img/i2.png'}" alt="${ORGANIZATION_NAME} Icon" style="max-width: 100px;" />
             </div>
-            <h2 style="color: #ffaa1c; text-align: center;">Payment Received</h2>
+            <h2 style="color: #ffcf0b; text-align: center;">Payment Received</h2>
             <p>Dear Admin,</p>
             <p>This is to notify you that <strong>${studentName}</strong> has successfully paid <strong>$${membershipFee.toFixed(2)}</strong> for the <strong>${membershipType}</strong> membership.</p>
             <p>Payment was received on <strong>${formattedPaymentDate}</strong>.</p>

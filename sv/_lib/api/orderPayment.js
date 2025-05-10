@@ -207,7 +207,7 @@ function successPage({ order_id, name, total, items} = { items: [{ name: undefin
         :root {
             --main-bg: whitesmoke;
             --card-bg: white;
-            --accent-color: #ffaa1c;
+            --accent-color: #ffcf0b;
             --text-color: black;
             --success-color: #4caf50;
             --font-family: 'Libre Franklin', sans-serif;
@@ -356,7 +356,7 @@ function cancelPage({order_id, name, total, items}= { items: [{ name: undefined 
         :root {
             --main-bg: whitesmoke;
             --card-bg: white;
-            --accent-color: #ffaa1c;
+            --accent-color: #ffcf0b;
             --text-color: black;
             --warning-color: #ff9800;
             --font-family: 'Libre Franklin', sans-serif;

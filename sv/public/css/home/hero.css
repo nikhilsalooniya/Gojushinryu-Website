@@ -66,10 +66,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: flex-start;
     row-gap: 0.5em;
     position: absolute;
     z-index: 3;
+    text-align: left;
 }
 
 
@@ -83,10 +84,10 @@ body {
 #hero_content>h1 {
     margin-top: 1em;
     color: #ffffff;
-    font-size: 3.1vw;
+    font-size: 2.8vw;
     font-weight: var(--first-fw);
     z-index: 3;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     text-transform: uppercase;
     word-spacing: 4px;
@@ -127,17 +128,31 @@ body {
 
 @media screen and (max-width:900px) {
     #hero_content>h1 {
-        font-size: 26px;
-
+        font-size: 20px;
+        text-align: center !important;
+        padding: 0px 20px;
     }
 
     #hero_content>b {
-        font-size: 20px;
+        font-size: 18px;
+        margin-bottom: 20px !important;
+        margin-top: 0 !important;
     }
 
     #hero_content>button {
         padding: 9.5px 16px;
         font-size: 15px;
+    }
+
+    #hero_content {
+        transform: unset !important;
+        align-items: center !important;
+        top: 150px !important;
+    }
+
+    #hero-image-new {
+        transform: unset !important;
+        height: 60vh !important;
     }
 }
 

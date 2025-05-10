@@ -19,7 +19,9 @@ body{
 }
 
 #main_content > article {
-  width: 66em;
+  /*width: 66em;*/
+  width: 100%;
+  max-width: 66em;
   background: white;
   /* height:70em ;  */
   display: flex;
@@ -42,8 +44,9 @@ body{
 
 
 #main_content > article >.v-div {
-  width: 95%;
+  /*width: 95%;*/
   /* padding-top: 1.5em; */
+  /*padding: 10px;*/
 }
 
 @media screen and (min-width :500px) and (max-width :900px) {
@@ -73,7 +76,7 @@ body{
   width:90%;
   display:flex;
   flex-direction:row;
-  justify-content:center;
+  /*justify-content:center;*/
   align-items: start;
   column-gap: 2em;
   row-gap: 2em;
@@ -88,7 +91,8 @@ body{
 }
 
 #main_content > article > .info  > div:nth-child(1) {
-  width: 50%;
+  /*width: 50%;*/
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -121,7 +125,7 @@ margin-bottom: .5em;
 }
 
 #main_content > article > .info  > div:nth-child(1) > .btn-box > button:nth-child(1){
-  width: 11.5em;
+  /*width: 11.5em;*/
   height: 3.1em;
   border: 2px solid  var(   --main-cl);
   color: white;
@@ -132,10 +136,15 @@ margin-bottom: .5em;
   font-weight: 500;
   line-height: 0px;
   font-size: .95em;
+
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px;
 }
 
 #main_content > article > .info  > div:nth-child(1) > .btn-box > button:nth-child(2){
-  width: 11.5em;
+  /*width: 11.5em;*/
   height: 3.1em;
   border: 2px solid var(--main-cl);
   color: var(--main-cl);
@@ -146,11 +155,18 @@ margin-bottom: .5em;
   font-weight: 500;
   line-height: 0px;
   font-size: .95em;
+
+  white-space: nowrap;
+  display: inline-block;
+  width: 100%;
+  padding: 0 20px;
 }
 
 
 #main_content > article > .info  > div:nth-child(2) {
-  width: 50%;
+  /*width: 50%;*/
+  width: 100%;
+  max-width: 480px;
 }
 
 @media screen and (min-width :500px) and (max-width :900px) {

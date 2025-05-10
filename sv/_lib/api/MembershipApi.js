@@ -386,7 +386,7 @@ export function membershipSuccessPage({ student_name, types, ids } = { student_n
         :root {
             --main-bg: whitesmoke;
             --card-bg: white;
-            --accent-color: #ffaa1c;
+            --accent-color: #ffcf0b;
             --text-color: black;
             --success-color: #4caf50;
             --font-family: 'Libre Franklin', sans-serif;

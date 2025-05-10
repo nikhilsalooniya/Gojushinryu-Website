@@ -33,7 +33,7 @@ export async function countryRepresentativeFormSubmitedPage(req = request, res =
     :root {
       --main-bg: whitesmoke;
       --card-bg: #ffffff;
-      --accent-color: #ffaa1c;
+      --accent-color: #ffcf0b;
       --text-color: #333;
       --font-family: 'Libre Franklin', sans-serif;
       --shadow: rgba(0, 0, 0, 0.1);
@@ -190,7 +190,7 @@ export async function getCountryRepresentatives(req, res) {
         });
 
         data = data.map(el => {
-            let { name, id, description, email, thumbUrl, country } = el;
+            let { name, id, description, email, thumbUrl, country, url } = el;
             return {
                 name,
                 description,
@@ -198,6 +198,7 @@ export async function getCountryRepresentatives(req, res) {
                 thumbUrl,
                 country,
                 id,
+                url,
                 shortDescription: el.description.length < 120 ? el.description : el.description.substring(0, 120)
             }
         });
@@ -545,7 +546,7 @@ function PaymentSuccessPage(res = response) {
         :root {
             --main-bg: whitesmoke;
             --card-bg: #ffffff;
-            --accent-color: #ffaa1c;
+            --accent-color: #ffcf0b;
             --text-color: #333;
             --font-family: 'Libre Franklin', sans-serif;
         }
@@ -658,7 +659,7 @@ function PaymentCancelPage(res = response) {
         :root {
             --main-bg: whitesmoke;
             --card-bg: #ffffff;
-            --accent-color: #ffaa1c;
+            --accent-color: #ffcf0b;
             --text-color: #333;
             --font-family: 'Libre Franklin', sans-serif;
             --error-color: #d9534f;

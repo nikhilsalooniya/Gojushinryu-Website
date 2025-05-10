@@ -27,8 +27,8 @@ window.addEventListener('load',
                                     <img src="${appreciator_image_url}" alt="student">
                                     <div>
                                        <strong>${appreciator}</strong>
-                                       <span style="color:#FF6F3C">${appreciation_position}</span>
-                                       <hr style="background-color:#FF6F3C" >
+                                       <span style="color:#ffcf0b">${appreciation_position}</span>
+                                       <hr style="background-color:#ffcf0b" >
                                     </div>
                                 </div>
                             </div>
@@ -47,8 +47,8 @@ window.addEventListener('load',
                                         <img src="${appreciator_image_url}" alt="student">
                                         <div>
                                            <strong>${appreciator}</strong>
-                                           <span style="color:#FF6F3C">${appreciation_position}</span>
-                                           <hr style="background-color:#FF6F3C" >
+                                           <span style="color:#ffcf0b">${appreciation_position}</span>
+                                           <hr style="background-color:#ffcf0b" >
                                         </div>
                                     </div>
                                 </div>

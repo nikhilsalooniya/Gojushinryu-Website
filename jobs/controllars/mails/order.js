@@ -27,14 +27,14 @@ export async function sendOrderCancellationEmailToUser({ email, userName, orderI
               <div style="text-align: center; margin-bottom: 20px;">
                 <img src="${WEBSITE_ORIGIN + '/img/i1.png'}" alt="${ORGANIZATION_NAME} Icon" style="max-width: 100px;" />
               </div>
-              <h2 style="color: #ffaa1c; text-align: center;">Order Cancelled</h2>
+              <h2 style="color: #ffcf0b; text-align: center;">Order Cancelled</h2>
               <p>Dear ${userName},</p>
               <p>We regret to inform you that your order with Order ID <strong>${orderId}</strong> has been automatically cancelled.</p>
               <p>This cancellation occurred because payment was not received within 7 days, and we did not receive any response from you.</p>
               <p>The order was cancelled on <strong>${formattedCancellationDate}</strong>.</p>
               <p>If you have any questions, please contact us at:</p>
               <ul style="list-style: none; padding: 0;">
-                <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffaa1c;">${ADMIN_EMAIL}</a></li>
+                <li>Email: <a href="mailto:${ADMIN_EMAIL}" style="color: #ffcf0b;">${ADMIN_EMAIL}</a></li>
                 <li>Phone: ${ADMIN_PHONE}</li>
               </ul>
               <p>Thank you for your understanding.</p>
@@ -72,7 +72,7 @@ export async function sendWeeklyCancelledOrdersReportEmailToAdmin(cancelledOrder
       const emailHtml = `
         <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.6;">
           <div style="max-width: 700px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
-            <h2 style="color: #ffaa1c; text-align: center;">Weekly Cancelled Orders Report</h2>
+            <h2 style="color: #ffcf0b; text-align: center;">Weekly Cancelled Orders Report</h2>
             <p>Dear Admin,</p>
             <p>The following orders have been automatically cancelled this week due to non-payment (7 days timeout):</p>
             <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
@@ -88,7 +88,7 @@ export async function sendWeeklyCancelledOrdersReportEmailToAdmin(cancelledOrder
               </tbody>
             </table>
             <p>You can view more details in the Control Panel.</p>
-            <p><a href="${WEBSITE_ORIGIN}/control-panal" style="color: #ffaa1c; text-decoration: none;">Go to Control Panel</a></p>
+            <p><a href="${WEBSITE_ORIGIN}/control-panal" style="color: #ffcf0b; text-decoration: none;">Go to Control Panel</a></p>
             <p>Best regards,<br>The <strong>${ORGANIZATION_NAME}</strong> System</p>
           </div>
         </div>

@@ -39,7 +39,7 @@ InshaAllah, By his Marcy I will Gain Success
    }
    @media screen and (max-width: 510px) {
      #banner p {
-       width: 400px;
+       width: 320px;
      }
    }
    #banner button {
@@ -60,7 +60,7 @@ InshaAllah, By his Marcy I will Gain Success
     justify-content:center;
     align-items: start;
     flex-wrap: wrap;
-    padding: 3.4em 0px;
+    padding: 3.4em 20px;
     column-gap: 55px;
     row-gap: 45px; 
     box-sizing: border-box;
@@ -160,7 +160,7 @@ InshaAllah, By his Marcy I will Gain Success
     line-height: 1.6;
 }
 .testimonials > div> .testimonial  > .div2>i{
-    color: #FF6F3C;
+    color: var(--orange-new);
     box-sizing: border-box;
     font-size: 27px;
 }

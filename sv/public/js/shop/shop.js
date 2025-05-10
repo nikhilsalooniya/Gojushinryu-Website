@@ -92,7 +92,8 @@ async function LoadProducs(params) {
 
 async function addToCard(e) {
     let id = e.target.getAttribute('prod-id');
-    let check = addedProduct.find(el => el.id == id);
+    let check = await addedProduct.find(el => el.id == id);
+    console.log(check);
     if (check) {
         addedProduct = addedProduct.map(el => {
             if (el.id == id) {
@@ -101,10 +102,11 @@ async function addToCard(e) {
             }
             else return el
         })
+        console.log('Moving to Cart')
         return window.location.assign('/shop/cart')
     }
     if (!check) {
-        let prod = productDataArray.find(el => el.id == id);
+        let prod = await productDataArray.find(el => el.id == id);
         if (!prod) { return }
         addedProduct.push({
             prod: prod,
@@ -116,7 +118,9 @@ async function addToCard(e) {
         log(Number(e.target.getAttribute('df-price')));
         addToStorage(addedProduct);
         shopAddtoCartNumberofProduct();
-        return
+        console.log('Moving to Cart...')
+        window.location.assign('/shop/cart')
+        // return
     }
 }
 
