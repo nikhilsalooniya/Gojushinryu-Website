@@ -135,7 +135,7 @@ body {
 
     #hero_content>b {
         font-size: 18px;
-        margin-bottom: 20px !important;
+        margin-bottom: 10px !important;
         margin-top: 0 !important;
     }
 
@@ -147,7 +147,7 @@ body {
     #hero_content {
         transform: unset !important;
         align-items: center !important;
-        top: 150px !important;
+        top: 120px !important;
     }
 
     #hero-image-new {
