@@ -13,6 +13,7 @@ Insha Allah,  By the marcy of Allah,  I will gain success
             .then(function (response) {
                 let { data } = response;
                 if (!data) return
+                console.log(data)
                 let insertionHtml = '';
                 for (let i = 0; i < data.length; i++) {
                     const {
@@ -22,27 +23,28 @@ Insha Allah,  By the marcy of Allah,  I will gain success
                         organizerCountry,
                         eventDate,
                     } = data[i];
+                    if (eventDate < Date.now()) continue;
                     insertionHtml += `
-                <div class="event_box">
-                <img src="${thumb}" alt="martial art event image">
-                <div class="div1">
-                <div>
-                <h3>${title}</h3>
-                <span>In ${organizerCountry}</span>
-                </div>
-                <div>
-                <span>${new Date(eventDate).toLocaleString(undefined, { month: 'short' })}</span>
-                <b>${new Date(eventDate).getDate()}</b>
-                </div>
-                </div>
-                <p>${description}</p>
-                <hr>
-                <div class="div2">
-                <span>Join Now</span>
-                <span> <a href="/contact">Contact Us</a></span>
-                </div>
-                </div>
-                `;
+                    <div class="event_box">
+                    <img src="${thumb}" alt="martial art event image">
+                    <div class="div1">
+                    <div>
+                    <h3>${title}</h3>
+                    <span>In ${organizerCountry}</span>
+                    </div>
+                    <div>
+                    <span>${new Date(eventDate).toLocaleString(undefined, { month: 'short' })}</span>
+                    <b>${new Date(eventDate).getDate()}</b>
+                    </div>
+                    </div>
+                    <p>${description}</p>
+                    <hr>
+                    <div class="div2">
+                    <span>Join Now</span>
+                    <span> <a href="/contact">Contact Us</a></span>
+                    </div>
+                    </div>
+                    `;
                 }
                 document.getElementById(`event-list`).innerHTML = insertionHtml;
             })

@@ -157,9 +157,11 @@ export async function deleteEvent(req, res) {
 export async function eventPageNavigation(req, res) {
   try {
     let events = await Events.find({}).sort({Date :-1});
+    let activeEvents = [];
     for (let i = 0; i < events.length; i++) {
-      let { title, thumb, eventDate, organizerCountry, description } = events[0];
-      events.push({
+      let { title, thumb, eventDate, organizerCountry, description } = events[i];
+      if (eventDate < Date.now()) continue;
+      activeEvents.push({
         title: title.length > 120 ? title.substring(0, 120) : title,
         thumb: thumb,
         organizerCountry,
@@ -167,9 +169,9 @@ export async function eventPageNavigation(req, res) {
         month: new Date(eventDate).toLocaleString('en-us', {month :'long'}),
         description: description.length === 103 ? description : description.substring(0, 103)
       });
-      events.shift();
+      // events.shift();
     }
-    return res.render('events', { events: events })
+    return res.render('events', { events: activeEvents })
   } catch (error) {
     log({ error })
     return res.render('events')
@@ -259,7 +261,7 @@ export async function adminEventUplaodAPI(req, res) {
 
 export async function eventsHome(req, res) {
   try {
-    return res.status(200).json({ data: (await Events.find({},'title description eventDate thumb organizerCountry').sort({ Date: -1 }).limit(2)) });
+    return res.status(200).json({ data: (await Events.find({},'title description eventDate thumb organizerCountry').sort({ Date: -1 })) });
   } catch (error) {
     console.error(error)
     return res.sendStatus(500)
