@@ -2,7 +2,7 @@
 
 @keyframes topBarAnime1{
     from{
-    right:-50vw;
+    right:-80vw;
     }
     to{
     right: 150vw;
@@ -10,7 +10,7 @@
 }
 @keyframes topBarAnime2{   
     from{
-    right:-50vw;
+    right:-80vw;
     }
     to{
     right: 150vw;
