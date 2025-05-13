@@ -156,7 +156,7 @@ body {
     }
 
     #hero-image-new {
-        transform: unset !important;
+        transform: translateY(20%) !important;
         height: 60vh !important;
     }
 }
