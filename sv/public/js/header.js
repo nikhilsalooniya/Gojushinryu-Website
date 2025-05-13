@@ -19,7 +19,8 @@ let aboutUsHeaderNav=document.querySelector('#about-us-header-nav-div-link-ancho
 
 
 
-headerIcon.setAttribute('src' ,'/img/header_icon1.png') ;
+// headerIcon.setAttribute('src' ,'/img/header_icon1.png') ;
+headerIcon.setAttribute('src' ,'/img/logo-white-trans.png') ;
 
 function loadH3(params) { 
       let h3=  document.createElement('h3');

@@ -48,7 +48,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/img/karate-fighters-3.jpg");
+    background-image: url("/img/karate-fighters-3.jpg");
+    /*background-image: url("/img/hero-bg-light.jpeg");*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
