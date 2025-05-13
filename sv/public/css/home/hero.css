@@ -48,7 +48,8 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-image: url("/img/karate-fighters-3.jpg");
+    background-image: url("/img/hero-bg-castle-5.jpg");
+    /*background-image: url("/img/karate-fighters-3.jpg");*/
     /*background-image: url("/img/hero-bg-light.jpeg");*/
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,7 +58,7 @@ body {
 
 
 #hvideo {
-    width: 100vw;
+    width: 100vw
     position: absolute;
     z-index: -30;
     left: 0px;
