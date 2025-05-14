@@ -2,6 +2,20 @@
 بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ  ﷺ   
 Insha Allab,  By the marcy of Allah,  I will gain success
 */
+
+const colors = [
+    'white',
+    'yellow',
+    'orange',
+    'green',
+    'blue',
+    'purple',
+    'purple',
+    'brown',
+    'brown',
+    'brown',
+]
+
 {
     let container = document.querySelector("#v_sylabus");
     let seen = false;
@@ -40,18 +54,6 @@ Insha Allab,  By the marcy of Allah,  I will gain success
                 // txt.value = "Yellow Belt";
                 // txt.disabled=true;
                 // td.append(txt)
-                const colors = [
-                    'white',
-                    'yellow',
-                    'orange',
-                    'green',
-                    'blue',
-                    'purple',
-                    'purple',
-                    'brown',
-                    'brown',
-                    'brown',
-                ]
 
                 let txt = document.createElement('select');
                 txt.style.width = '100%';
@@ -189,6 +191,16 @@ Insha Allab,  By the marcy of Allah,  I will gain success
     let clrButton = form.querySelector('.clr-btn');
     let addButton = form.querySelector('.add-btn');
     let titleInput = form.querySelector('input'), txtInput = form.querySelector('textarea');
+    let selectInput = form.querySelector('#change-belt');
+
+    selectInput.addEventListener('change', (e) => {
+        e.preventDefault();
+        const select = e.target;
+        const value = Number(select?.value);
+
+        selectInput.style.color = value > 1 ? 'white' : 'black';
+        selectInput.style.backgroundColor = colors[value];
+    })
 
     addButton.addEventListener('click', addVideo)
     clrButton.addEventListener('click', clearFormInput);
@@ -199,6 +211,7 @@ Insha Allab,  By the marcy of Allah,  I will gain success
             if (isAddingVideo) return;
             isAddingVideo = true;
             let title = titleInput.value;
+            let colorCode = selectInput.value;
             let code = txtInput.value;
             if (!title.trim() || !code.trim()) {
                 function makeitRed(input = titleInput) {
@@ -216,7 +229,7 @@ Insha Allab,  By the marcy of Allah,  I will gain success
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    title, code
+                    title, code, colorCode
                 })
             });
             if (response.status === 200) {

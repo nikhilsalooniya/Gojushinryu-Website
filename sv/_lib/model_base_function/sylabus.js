@@ -93,7 +93,7 @@ async function findVideoAsset(req=request, res=response) {
 }
 async function postVideoAsset(req=request, res=response) {
     try {
-        let {title , code }=req.body;
+        let {title , code, colorCode }=req.body;
         if (!title || !code) throw 'title, code is missing';
         if (!title.trim()) throw 'title is missing';
         if (!code.trim()) throw 'code is missing';
@@ -105,8 +105,9 @@ async function postVideoAsset(req=request, res=response) {
             assetType :'video',
             content :code ,
             title :title ,
+            colorCode: colorCode
         });
-        return res.status(200).json({ id: videoAsset.id, title: videoAsset.title, code: decodeURIComponent(videoAsset.content) });
+        return res.status(200).json({ id: videoAsset.id, title: videoAsset.title, code: decodeURIComponent(videoAsset.content), colorCode: videoAsset.colorCode });
     } catch (error) {
         catchError(res,error)
     }
