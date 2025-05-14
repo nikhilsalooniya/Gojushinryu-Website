@@ -85,7 +85,7 @@ async function deleteText(req=request, res=response) {
 
 async function findVideoAsset(req=request, res=response) {
     try {
-        let videos = (await SyllabusAsset.find({}, 'title content id').where('assetType').equals('video')).map(el => ({ id: el.id, code: decodeURIComponent(el.content), title: el.title }));
+        let videos = (await SyllabusAsset.find({}, 'title content id colorCode').where('assetType').equals('video')).map(el => ({ id: el.id, code: decodeURIComponent(el.content), title: el.title, colorCode: el.colorCode }));
         return res.status(200).json(videos);
     } catch (error) {
        catchError(res,error)
@@ -113,7 +113,7 @@ async function postVideoAsset(req=request, res=response) {
 }
 async function putVideoAsset(req = request, res = response) {
     try {
-        let { id, code } = req.body;
+        let { id, code, colorCode } = req.body;
         if (!id || !code) throw 'id, code is missing';
         id = Number(id);
         if (id === 0 || id.toString() === 'NaN') throw 'id is not  a NaN';
@@ -125,6 +125,7 @@ async function putVideoAsset(req = request, res = response) {
         
         if (videoAsset===null ) throw 'asset not found';
         videoAsset.content=encodeURIComponent(code);
+        videoAsset.colorCode=colorCode;
         await videoAsset.save();
         return res.status(200).json({});
     } catch (error) {

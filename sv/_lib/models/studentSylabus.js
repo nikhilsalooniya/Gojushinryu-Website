@@ -43,6 +43,10 @@ const syllabusAssetSchema = new mongoose.Schema({
     backupAssetLink: {
         type: String,
         default :'null'
+    },
+    colorCode: {
+        type: Number,
+        default: 0
     }
 });
 

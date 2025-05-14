@@ -45,10 +45,6 @@ import SaminarRouter from "../_lib/model_base_function/saminar.js";
 import { organizationChartsRouter } from "../_lib/model_base_function/Settings.js";
 import { AllienceGrandMasterRouter } from "../_lib/model_base_function/AllienceGrandMaster.js";
 
-
-
-
-
 //variables
 let router =Router()
 

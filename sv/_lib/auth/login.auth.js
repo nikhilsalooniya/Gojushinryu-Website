@@ -39,6 +39,7 @@ export const loginApiFunc = async (req=request, res=response) => {
     let user = await User.findOne().where('email').equals(email).where('isRegistered').equals(true)
     if (!user) return res.json({ error: 'not user info match ,Please Create an account' });
     let passwordMatch = await bcrypt.compareSync(password, user.password)/* password ===user.password*///testing the password
+    // let passwordMatch = true /* password ===user.password*///testing the password
     if (!passwordMatch) return res.json({ error: 'password not match ,Please Create a give the correct' });
     const jwtObject = { email, pin: generatePin(67896), };
     let rft = await jwt.sign(jwtObject, JWT_SECRET_KEY, {});
@@ -77,6 +78,7 @@ export const GMLoginApiFunc =async (req, res) => {
      let user = await GM.findOne({email})
      if (!user) return res.json({error :'not user info match ,Please Create an account'});
      let passwordMatch = await bcrypt.compareSync(password,user.password)/* password ===user.password*///testing the password
+     // let passwordMatch = true; /* password ===user.password*///testing the password
      if (!passwordMatch) return res.json({error : 'password not match ,Please Create a give the correct'});
      let rft=await jwt.sign({
       email,

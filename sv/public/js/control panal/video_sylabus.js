@@ -36,6 +36,56 @@ Insha Allab,  By the marcy of Allah,  I will gain success
             }
             {
                 let td = document.createElement('td');
+                // let txt = document.createElement('input');
+                // txt.value = "Yellow Belt";
+                // txt.disabled=true;
+                // td.append(txt)
+                const colors = [
+                    'white',
+                    'yellow',
+                    'orange',
+                    'green',
+                    'blue',
+                    'purple',
+                    'purple',
+                    'brown',
+                    'brown',
+                    'brown',
+                ]
+
+                let txt = document.createElement('select');
+                txt.style.width = '100%';
+                txt.style.color = v.colorCode > 1 ? 'white' : 'black';
+                txt.style.backgroundColor = colors[v.colorCode];
+                txt.style.border = '1px solid lightgray';
+                txt.name = "color-belt";
+                txt.id = 'color-belt';
+                txt.disabled=true;
+                txt.innerHTML = (`
+                  <option value="0" style="color: black; background-color: ${colors[0]}" ${v.colorCode == 0 ? 'selected' : ""}>White</option>
+                  <option value="1" style="color: black; background-color: ${colors[1]}" ${v.colorCode == 1 ? 'selected' : ""}>Yellow</option>
+                  <option value="2" style="color: white; background-color: ${colors[2]}" ${v.colorCode == 2 ? 'selected' : ""}>Orange</option>
+                  <option value="3" style="color: white; background-color: ${colors[3]}" ${v.colorCode == 3 ? 'selected' : ""}>Green</option>
+                  <option value="4" style="color: white; background-color: ${colors[4]}" ${v.colorCode == 4 ? 'selected' : ""}>Blue</option>
+                  <option value="5" style="color: white; background-color: ${colors[5]}" ${v.colorCode == 5 ? 'selected' : ""}>Purple</option>
+                  <option value="6" style="color: white; background-color: ${colors[6]}" ${v.colorCode == 6 ? 'selected' : ""}>Purple+1</option>
+                  <option value="7" style="color: white; background-color: ${colors[7]}" ${v.colorCode == 7 ? 'selected' : ""}>Brown</option>
+                  <option value="8" style="color: white; background-color: ${colors[8]}" ${v.colorCode == 8 ? 'selected' : ""}>Brown+1</option>
+                  <option value="9" style="color: white; background-color: ${colors[9]}" ${v.colorCode == 9 ? 'selected' : ""}>Brown+2</option>
+                `)
+
+                txt.onchange = (e) => {
+                    e.preventDefault();
+                    const value = e.target?.value;
+                    txt.style.color = value > 1 ? 'white' : 'black';
+                    txt.style.backgroundColor = colors[value];
+                }
+
+                td.append(txt);
+                tr.appendChild(td);
+            }
+            {
+                let td = document.createElement('td');
                 let txt = document.createElement('textarea');
                 txt.value = v.code;
                 txt.disabled=true;
@@ -71,7 +121,7 @@ Insha Allab,  By the marcy of Allah,  I will gain success
             let tr = tbody.querySelector(`tr[asid="${asid}"]`)
             if (mode === 'edit') {
 
-                tr.querySelectorAll('input,textarea').forEach(el => (el.disabled = false));
+                tr.querySelectorAll('input,textarea,select').forEach(el => (el.disabled = false));
                 tr.querySelector('.edit-v-ast').setAttribute('mode', 'save');
                 tr.querySelector('.edit-v-ast').innerHTML='Save';
                 return;
@@ -86,21 +136,31 @@ Insha Allab,  By the marcy of Allah,  I will gain success
                     });
                     throw 'Error , input is null';
                 };
+
+                // get colour belt value
+                let selectInPut = tr.querySelector('select');
+                let colorCode = Number(selectInPut.value);
+
                 let response = await fetch(window.location.origin + '/api/api_s/sylabus/assets/video', {
                     method: 'put',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
                         code: txt,
+                        colorCode: colorCode,
                         id: Number(asid)
                     })
                 });
+
                 if (response.status === 200) {
                     for (let i = 0; i < videos.length; i++) {
-                        if (videos[i].id == asid) videos[i].code = txt;
+                        if (videos[i].id == asid) {
+                            videos[i].code = txt;
+                            videos[i].colorCode = colorCode;
+                        }
                     }
                     orgTable();
                 }
-                tr.querySelector('textarea').disabled = true;
+                tr.querySelector('textarea, select').disabled = true;
                 tr.querySelector('.edit-v-ast').setAttribute('mode', 'edit');
                 tr.querySelector('.edit-v-ast').innerHTML='Edit';
                 return;
