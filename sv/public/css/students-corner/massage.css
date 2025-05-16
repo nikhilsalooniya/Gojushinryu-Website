@@ -25,7 +25,13 @@ Insha Allah,  By your Marcy Ya Allah
 }
 @media screen and (max-width:650px) {
   .chat-box-container {
-    width: 480px;
+    /*width: 480px;*/
+    width: 90%;
+    margin: auto;
+  }
+
+  .chat-box {
+    width: 100%;
   }
 }
 
@@ -194,7 +200,7 @@ Insha Allah,  By your Marcy Ya Allah
       width: fit-content;
     }
     .send-chat-massage-containar textarea{
-      min-width:340px ;
+      /*min-width:340px ;*/
       max-width:max-content;
     }
   

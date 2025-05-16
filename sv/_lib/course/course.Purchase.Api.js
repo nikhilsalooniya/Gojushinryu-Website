@@ -208,7 +208,7 @@ export async function courseContactApi(req = request, res = response) {
         if (!tobe.minMax(country, 3, 30)) namedErrorCatching('parameter error', 'country is too short or too big');
         if (!tobe.minMax(city, 3, 30)) namedErrorCatching('parameter error', 'city is too short or too big');
         if (!tobe.minMax(district, 3, 30)) namedErrorCatching('parameter error', 'district is too short or too big');
-        if (!tobe.minMax(road_no, 3, 30)) namedErrorCatching('parameter error', 'road_no is too short or too big');
+        // if (!tobe.minMax(road_no, 3, 30)) namedErrorCatching('parameter error', 'road_no is too short or too big');
         if (zipcode < 30 || zipcode > 1000000) namedErrorCatching('parameter error', 'zipcode is too short or too big');
 
         let courses = new Map([['2', '~Online Martial Art Classes~'], ['3', `~Our Seminars~`], ['4', `~Women Defence Classes~`]]);

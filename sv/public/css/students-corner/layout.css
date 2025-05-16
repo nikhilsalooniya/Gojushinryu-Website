@@ -36,6 +36,14 @@ a{
     color:inherit;
 }
 /*----------------------------sidebar----------------------*/
+
+@media screen and (max-width: 680px) {
+    .sidebar-div{
+        width: 90%;
+        margin: auto;
+    }
+}
+
 .sidebar-div{
     display: flex;
     flex-direction: column;
@@ -49,13 +57,14 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    width: var(--mob--width-box) ; 
-    height: 370px;
+    /*width: var(--mob--width-box) ; */
+    /*height: 370px;*/
     background: #fff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.07);
     border-radius :8px;
     row-gap: 12px;
     padding: 1.4em 1.75em;
+      width: 100%;
   }
   .st-bio span[student_id]{
     color: rgb(13, 95, 177);
@@ -63,7 +72,7 @@ a{
   }
    .st-bio > img {
     width: 140px;
-    height:140px;
+    /*height:140px;*/
     object-fit: cover;
     object-position: top center;
     border-radius: 50%;
@@ -128,7 +137,8 @@ font-weight: 500;
     justify-content: flex-start;
     align-items: start;
     row-gap: 20px;
-   width: 420px;
+   /*width: 420px;*/
+    width: 100%;
 }
 .st-nav-main > a {
     padding: 20px ;

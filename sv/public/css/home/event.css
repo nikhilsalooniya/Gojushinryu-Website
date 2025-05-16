@@ -12,7 +12,7 @@ InshaAllah, By his marcy I will Gain Success
         background-repeat: no-repeat;
         background-position:center center;
         background-size: cover;
-        padding: 4.5em 3em;
+        padding: 4em 1.2em;
         border-image: fill 1 ;
         border-image-source: linear-gradient(to right,rgba(0, 0, 0, 0.74),rgba(0, 0, 0, 0.74));
     }
@@ -49,7 +49,7 @@ InshaAllah, By his marcy I will Gain Success
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        padding: 2em 2em;
+        padding: 1em 1em;
         background: #7777775b;
         border-radius:10px ;
         box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.178);
@@ -60,7 +60,8 @@ InshaAllah, By his marcy I will Gain Success
     #event_section > div > div > img {
         width: 100%;
         margin-bottom: 1em;
-        height: 14em;
+        /*height: 14em;*/
+        aspect-ratio: 4/3;
         object-fit: cover;
         object-position: center center;
         opacity: 1;
@@ -71,6 +72,7 @@ InshaAllah, By his marcy I will Gain Success
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        flex-wrap: wrap-reverse;
 
     }
     #event_section > div > div >hr {
@@ -93,6 +95,7 @@ InshaAllah, By his marcy I will Gain Success
         flex-direction: column;
         justify-content: left;
         align-items: start;
+        width: 100%;
     }
     #event_section > div > div >.div1 > div:nth-child(2){
         display: flex;
@@ -115,9 +118,9 @@ InshaAllah, By his marcy I will Gain Success
         color: #f0f0f0;
     }
     #event_section > div > div >.div1 > div:nth-child(2) > span {
-        font-size: .8em;
+        font-size: 1.4em;
         font-weight: 500;
-        color: #d8d8d8;
+        color: gold;
 
     }
     #event_section > div > div >.div2 > span {

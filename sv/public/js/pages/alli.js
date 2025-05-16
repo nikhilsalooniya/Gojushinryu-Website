@@ -17,6 +17,7 @@ window.addEventListener('DOMContentLoaded', async function () {
             
             for (let i = 0; i < Masters.length; i++) {
                 const master = Masters[i];
+                console.log(master)
                 let div=this.document.createElement('div');
                 div.classList.add('master-card');
                 div.innerHTML=(`
@@ -34,6 +35,9 @@ window.addEventListener('DOMContentLoaded', async function () {
                     <div class="accent-bar"></div>
                 </div>
                 `);
+                if (master._id === "68220964e2dee974d97b4d48") {
+                    this.document.querySelector('#mastersGrid').insertAdjacentHTML(`beforeend`, '<hr style="width:100%; opacity: 20%">');
+                }
                 this.document.querySelector('#mastersGrid').appendChild(div);
             }
             document.getElementById('skeletonGrid').style.display = 'none';

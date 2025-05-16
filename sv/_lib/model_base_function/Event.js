@@ -167,7 +167,8 @@ export async function eventPageNavigation(req, res) {
         organizerCountry,
         date: new Date(eventDate).getDate(),
         month: new Date(eventDate).toLocaleString('en-us', {month :'long'}),
-        description: description.length === 103 ? description : description.substring(0, 103)
+        // description: description.length === 103 ? description : description.substring(0, 103)
+        description: description
       });
       // events.shift();
     }

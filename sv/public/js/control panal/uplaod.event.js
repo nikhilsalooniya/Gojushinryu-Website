@@ -49,9 +49,22 @@ Insha Allah,  By the marcy of Allah,  I will gain success
             insertElement.style.backgroundSize = 'contain';
             insertElement.style.backgroundPosition = 'center center';
             insertElement.style.backgroundRepeat = 'no-repeat';
+            insertElement.style.position = 'relative';
+            insertElement.innerHTML = (`
+                <span class="cross" style="position: absolute; right: 10px; top: 10px; color: black; padding: 2px 3px; background-color: gainsboro;
+                cursor: pointer">X</span>
+            `);
+            const id = images.indexOf(e.target.files[0]);
+            insertElement.setAttribute('id', id);
+            insertElement.querySelector('span').addEventListener('click', async e => {
+                if (images.length < 1) return;
+                images.splice(images.indexOf(id), 1);
+                console.log(images);
+                insertElement.remove();
+            });
             e.target.parentNode.appendChild(insertElement);
+            console.log(images)
         });
-  
 
     let notUplaoding=true;
     uploadEventButton.addEventListener('click', async e => {

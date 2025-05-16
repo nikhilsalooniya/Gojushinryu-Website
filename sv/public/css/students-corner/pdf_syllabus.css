@@ -3,7 +3,8 @@
 InshaAllah, By Allah's Will,  I will earn success
 */
 .pdf_syllabus {
-    width: 100%;
+    /*width: 100%;*/
+    width: 90%;
     max-width: 700px;
     background: #fff;
     border-radius: 8px;

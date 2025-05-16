@@ -46,10 +46,13 @@ Insha Allah,  By your Marcy Ya Allah
   
   @media screen and (max-width:700px) {
     #st-notification{
-      width: 500px;
+      /*width: 500px;*/
+      width: 90%;
+      margin: auto;
     }
     .Notification-massage-cobtainer{
-      width:460px ;
+      /*width:460px ;*/
+      width:100%;
     }
   }
 

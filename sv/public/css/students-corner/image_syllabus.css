@@ -7,7 +7,8 @@ Insha Allah,  By your Marcy Ya Allah
 
 
 .image_syllabus {
-    width: 100%;
+    /*width: 100%;*/
+    width: 90%;
     max-width: 900px;
     background: #fff;
     border-radius: 8px;

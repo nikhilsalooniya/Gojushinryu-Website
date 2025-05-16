@@ -13,7 +13,6 @@ Insha Allah,  By the marcy of Allah,  I will gain success
             .then(function (response) {
                 let { data } = response;
                 if (!data) return
-                console.log(data)
                 let insertionHtml = '';
                 for (let i = 0; i < data.length; i++) {
                     const {
@@ -24,6 +23,7 @@ Insha Allah,  By the marcy of Allah,  I will gain success
                         eventDate,
                     } = data[i];
                     if (eventDate < Date.now()) continue;
+                    console.log(description)
                     insertionHtml += `
                     <div class="event_box">
                     <img src="${thumb}" alt="martial art event image">
@@ -37,7 +37,7 @@ Insha Allah,  By the marcy of Allah,  I will gain success
                     <b>${new Date(eventDate).getDate()}</b>
                     </div>
                     </div>
-                    <p>${description}</p>
+                    <p style="width: 100%; overflow-wrap: anywhere; white-space-collapse: preserve">${description}</p>
                     <hr>
                     <div class="div2">
                     <span>Join Now</span>
