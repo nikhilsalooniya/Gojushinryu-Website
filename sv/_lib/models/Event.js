@@ -48,6 +48,10 @@ const schema =new mongoose.Schema({
     type :String 
   },
   organizerCountry:String,
+  link: {
+    type: String,
+    default: "/contact"
+  }
 })
 
 

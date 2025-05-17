@@ -21,6 +21,7 @@ Insha Allah,  By the marcy of Allah,  I will gain success
                         description,
                         organizerCountry,
                         eventDate,
+                        link
                     } = data[i];
                     if (eventDate < Date.now()) continue;
                     console.log(description)
@@ -40,7 +41,7 @@ Insha Allah,  By the marcy of Allah,  I will gain success
                     <p style="width: 100%; overflow-wrap: anywhere; white-space-collapse: preserve">${description}</p>
                     <hr>
                     <div class="div2">
-                    <span>Join Now</span>
+                    <span> <a href="${link}">Join Now</span></a>
                     <span> <a href="/contact">Contact Us</a></span>
                     </div>
                     </div>

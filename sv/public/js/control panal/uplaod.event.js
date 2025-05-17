@@ -75,6 +75,7 @@ Insha Allah,  By the marcy of Allah,  I will gain success
             if (!notUplaoding) return
             let title = v(`[placeholder="Write the Event Title"]`)
             let description = v(`[placeholder="Write the description of the event"]`);
+            let link = v(`[placeholder="Write the Event Link"]`);
             let
                 eventDate = container.querySelector(`[placeholder="Event Date"]`).valueAsNumber,
                 organizerCountry = v(`[placeholder="Organizing Country"]`);
@@ -83,7 +84,7 @@ Insha Allah,  By the marcy of Allah,  I will gain success
 
             if (!eventDate) throw new Error("Event Date is undefined");
 
-            console.log({ eventDate, title, description, thumb, images });
+            console.log({ eventDate, title, description, thumb, images, link });
 
             let formData = new FormData();
             formData.append('title', title);
@@ -91,7 +92,8 @@ Insha Allah,  By the marcy of Allah,  I will gain success
             formData.append('organizerCountry', organizerCountry);
             formData.append('thumb', thumb);
             formData.append('eventDate', eventDate)
-            
+            formData.append('link', link)
+
             for (let i = 0; i < images.length; i++) formData.append(`images`, images[i]);
 
             uploadEventButton.style.opacity = .6;

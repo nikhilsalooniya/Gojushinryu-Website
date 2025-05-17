@@ -159,7 +159,7 @@ export async function eventPageNavigation(req, res) {
     let events = await Events.find({}).sort({Date :-1});
     let activeEvents = [];
     for (let i = 0; i < events.length; i++) {
-      let { title, thumb, eventDate, organizerCountry, description } = events[i];
+      let { title, thumb, eventDate, organizerCountry, description, link } = events[i];
       if (eventDate < Date.now()) continue;
       activeEvents.push({
         title: title.length > 120 ? title.substring(0, 120) : title,
@@ -168,7 +168,8 @@ export async function eventPageNavigation(req, res) {
         date: new Date(eventDate).getDate(),
         month: new Date(eventDate).toLocaleString('en-us', {month :'long'}),
         // description: description.length === 103 ? description : description.substring(0, 103)
-        description: description
+        description: description,
+        link: link
       });
       // events.shift();
     }
@@ -216,6 +217,7 @@ export async function adminEventUplaodAPI(req, res) {
         let title = await repleCaracter(feilds.title[0]);
         let description = await repleCaracter(feilds.description[0]);
         let eventDate = feilds.eventDate[0];
+        let link = feilds.link[0];
         let organizerCountry = await repleCaracter(feilds.organizerCountry[0]);
         eventDate = Number(eventDate);
         if (eventDate.toString() === 'NaN') return Alert('event date is not correct', res);
@@ -243,7 +245,8 @@ export async function adminEventUplaodAPI(req, res) {
           images,
           eventDate,
           admin_writen: true,
-          organizerCountry
+          organizerCountry,
+          link
         })
 
         return res.sendStatus(201);
@@ -262,7 +265,7 @@ export async function adminEventUplaodAPI(req, res) {
 
 export async function eventsHome(req, res) {
   try {
-    return res.status(200).json({ data: (await Events.find({},'title description eventDate thumb organizerCountry').sort({ Date: -1 })) });
+    return res.status(200).json({ data: (await Events.find({},'title description eventDate thumb organizerCountry link').sort({ Date: -1 })) });
   } catch (error) {
     console.error(error)
     return res.sendStatus(500)
